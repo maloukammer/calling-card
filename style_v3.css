@@ -5,7 +5,8 @@
 
 
 body {
-    background-color: rgb(255, 255, 255);
+    background-image: url("data/Muster.jpg");
+    background-attachment: fixed;
     font-family: "Inter-Black", serif;
 }
 
@@ -20,6 +21,8 @@ h1 {
 
 h2 {
     color: rgb(255, 204, 64);
+    text-align:right;
+    font-size: 100px;
 }
 
 p {
@@ -35,33 +38,25 @@ display: grid;
 padding: 15px;
 gap: 15px;
 column-gap: 15px;
-grid-template-columns: 1fr 1fr 1fr;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 grid-template-areas: 
-"name name name"
-"projectname image-2 image-3"
-"image-1 image-2 image-3"
-"image-1 image-4 text-1"
-"bio image-4 image-5"
-". image-4 image-5"
-". . image-5";
+"schrift schrift schrift schrift schrift bio"
+"image-1 image-1 image-2 image-2 . ."
+". projectname projectname projectname image-3 image-3"
+". . text-1 text-1 image-3 image-3"
+"image-4 image-4 image-5 image-5 . ."
 }
 
 /* Hier beginnt die Zuordnung zu dem Raster */
 
-.name {
-    grid-area: name;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+
+.schrift {
+    grid-area: schrift;  
+    margin: 0;
 }
 
-.name h1 {
-    text-align: center;
-    font-size: 130px;
-    color: darkgrey;
-    margin: 0;
+.bio {
+    grid-area: bio;
 }
 
 .projectname {
@@ -70,15 +65,9 @@ grid-template-areas:
 }
 
 .projectname h2 {
-    font-size: 40px;
     margin: 0;
 }
 
-.bio {
-    grid-area: bio;
-    align-self: center;
-    margin: 0;
-}
 
 .image-1 {
     grid-area: image-1;
@@ -109,8 +98,6 @@ grid-template-areas:
     grid-area: text-1;
     margin: 0;
 }
-
-
 
 
 /* Hier endet die Zuordnung zu dem Raster */

@@ -1,0 +1,138 @@
+@font-face {
+    font-family: "Archivo";
+    src: url("fonts/Archivo-Regular.woff2") format("woff2");
+}
+
+
+body {
+    background-image: url("data/mk.svg");
+    background-attachment: fixed;
+    font-family: "Archivo", serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    margin: 0;
+}
+
+nav a{
+    text-decoration: none;
+    color: inherit;
+}
+
+h2 {
+    color: rgb(255, 204, 64);
+    text-align: left;
+    font-size: 100px;
+}
+
+p {
+    margin: 0;
+    color: darkgrey;
+    font-size: 16px;
+}
+
+/* Hier geht es um das Raster */
+
+.grid-container {
+display: grid;
+padding: 15px;
+gap: 15px;
+column-gap: 15px;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+grid-template-areas: 
+". . name name bio bio"
+" image-1 image-1 image-2 image-2 . ."
+" image-3 image-3 image-4 image-4 . ."
+" image-5 image-5 projectname projectname projectname ."
+" image-5 image-5 text-1 text-1 . ."
+}
+
+/* Hier beginnt die Zuordnung zu dem Raster */
+
+.name {
+    grid-area: name;  
+    margin-bottom: 350px;
+    text-align: center;
+    font-size: 8px;
+    position: sticky;
+    top: 15px;
+}
+
+.name h1 {
+    grid-area: name;
+    margin: 0;
+}
+
+.bio {
+    grid-area: bio;
+    text-align: right;
+}
+
+#projectname {
+    grid-area: projectname;
+    margin: 0;
+}
+
+#projectname h2 {
+    margin: 0;
+}
+
+
+.image-1 {
+    grid-area: image-1;
+    margin: 0;
+    position: relative;
+}
+
+.image-1 img {
+    transition: opacity ;
+}
+
+.image-1 .b {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.image-1:hover .a {
+    opacity: 0;
+}
+
+.image-1:hover .b {
+    opacity: 1;
+}
+
+.image-2 {
+    grid-area: image-2;
+    margin: 0;
+}
+
+.image-3 {
+    grid-area: image-3;
+    margin: 0;
+}
+
+.image-4 {
+    grid-area: image-4;
+    margin: 0;
+}
+
+.image-5 {
+    grid-area: image-5;
+    margin: 0;
+}
+
+.text-1 {
+    grid-area: text-1;
+    margin: 0;
+}
+
+
+/* Hier endet die Zuordnung zu dem Raster */
+

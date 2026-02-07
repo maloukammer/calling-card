@@ -1,0 +1,132 @@
+@font-face {
+    font-family: "Inter-Black";
+    src: url("fonts/Inter-Black.woff2") format("woff2");
+}
+
+
+body {
+    font-family: "Inter-Black", serif;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    margin: 0;
+}
+
+
+h2 {
+    color: rgb(255, 204, 64);
+    text-align: left;
+    font-size: 100px;
+}
+
+p {
+    margin: 0;
+    color: darkgrey;
+    font-size: 20px;
+}
+
+/* ---------------------------------------- Raster -------------------------------------- */
+
+.grid-container {
+display: grid;
+padding: 20px;
+gap: 20px;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-areas: 
+"schrift schrift schrift"
+"image-1 image-2 projectname"
+"image-1 image-2 image-4"
+"image-3 text-1 image-4"
+"image-3 image-5 image-4"
+". image-5 video";
+}
+
+/* ----------------------------------- Behälter -----------------------------------------*/
+
+.video {
+    grid-area: video;
+    clip-path: inset(100px 0 0 0);
+    margin-top: -100px;
+}
+
+.schrift {
+    grid-area: schrift;  
+    margin: 0;
+    position:relative;
+}
+
+.schrift img {
+    transition:opacity 1s ease
+}
+
+.schrift .b {
+    position:absolute;
+    top:0;
+    left:0;
+    opacity:0;
+}
+
+.schrift:hover .a {
+    opacity:0;
+}
+
+.schrift:hover .b {
+    opacity:1;
+}
+
+.projectname {
+    grid-area: projectname;
+    margin: 0;
+}
+
+.projectname h2 {
+    margin: 0;
+    text-align: left;
+}
+
+.image-1 {
+    grid-area: image-1;
+    margin: 0;
+}
+
+.image-2 {
+    grid-area: image-2;
+    margin: 0;
+}
+
+.image-3 {
+    grid-area: image-3;
+    margin: 0;
+}
+
+.image-4 {
+    grid-area: image-4;
+    margin: 0;
+}
+
+.image-5 {
+    grid-area: image-5;
+    margin: 0;
+}
+
+.text-1 {
+    grid-area: text-1;
+    margin: 0;
+}
+
+
+
+
+/* Hier endet die Zuordnung zu dem Raster */
+

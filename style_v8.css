@@ -1,0 +1,216 @@
+@font-face {
+    font-family: "Poppins-Light";
+    src: url("fonts/Poppins-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Poppins-Black";
+    src: url("fonts/Poppins-Black.otf") format("opentype");
+}
+
+body {
+    font-family: "Poppins-Light", serif;
+}
+
+h1 {
+    margin: 0;
+    font-family: "Poppins-Black", serif;
+    font-size: 70px;
+    line-height: 80px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin: 0;
+    display: block;
+}
+
+
+/* ---------------------------------------- Raster -------------------------------------- */
+
+.grid-container {
+display: grid;
+padding: 20px;
+gap: 20px;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-areas: 
+"schrift schrift schrift"
+"designobjekte-1 designobjekte-name designobjekte-3"
+"designobjekte-1 designobjekte-5 designobjekte-3"
+"designobjekte-4 designobjekte-5 designobjekte-text"
+"designobjekte-4 designobjekte-5 designobjekte-2"
+"designobjekte-4 drehbuch-2 designobjekte-2"
+"drehbuch-name drehbuch-2 designobjekte-2"
+"drehbuch-1 drehbuch-2 drehbuch-3"
+"drehbuch-1 drehbuch-text drehbuch-3"
+"drehbuch-4 drehbuch-5 ."
+"paris-1 paris-2 paris-3"
+"paris-4 paris-5 ."
+". . paris-name"
+". . paris-text";
+}
+
+/* -------------------------------------- Inhalt-------------------------------------------*/
+
+/* ---------------------------- Malou Kammer ---------------------------- */
+.maloukammer {
+    grid-area: schrift;  
+    margin: 0;
+    position:relative;
+}
+
+
+
+/* ------------------------- Designobjekte ---------------------------- */
+.designobjekte-name {
+    grid-area: designobjekte-name;
+    margin: 0;
+}
+
+.designobjekte-name h1 {
+    margin: 0;
+    text-align: left;
+}
+
+.desginobjekte-text {
+    grid-area: designobjekte-text;
+    margin: 0;
+}
+
+.designobjekte-text p {
+    margin: 0;
+    text-align: left;
+}
+
+/* ---- Designobjekte Bilder ---- */
+.designobjekte-1 {
+    grid-area: designobjekte-1;
+    margin: 0;
+}
+
+.designobjekte-2 {
+    grid-area: designobjekte-2;
+    margin: 0;
+}
+
+.designobjekte-3 {
+    grid-area: designobjekte-3;
+    margin: 0;
+}
+
+.designobjekte-4 {
+    grid-area: designobjekte-4;
+    margin: 0;
+}
+
+.designobjekte-5 {
+    grid-area: designobjekte-5;
+    margin: 0;
+}
+
+/* ---------------------------- Drehbuch ---------------------------- */
+.drehbuch-name {
+    grid-area: drehbuch-name;
+    margin: 0;
+}
+
+.drehbuch-name h1 {
+    margin: 0;
+    text-align: left;
+}
+
+.drehbuch-text {
+    grid-area: drehbuch-text;
+    margin: 0;
+}
+
+.drehbuch-text p {
+    margin: 0;
+    text-align: left;
+}
+
+/* ---- Drehbuch Bilder ---- */
+.drehbuch-1 {
+    grid-area: drehbuch-1;
+    margin: 0;
+}
+
+.drehbuch-2 {
+    grid-area: drehbuch-2;
+    margin: 0;
+}
+
+.drehbuch-3 {
+    grid-area: drehbuch-3;
+    margin: 0;
+}
+
+.drehbuch-4 {
+    grid-area: drehbuch-4;
+    margin: 0;
+}
+
+.drehbuch-5 {
+    grid-area: drehbuch-5;
+    margin: 0;
+}
+
+/* ------------------------------- Paris ------------------------------- */
+.paris-name {
+    grid-area: paris-name;
+    margin: 0;
+}
+
+.paris-name h1 {
+    margin: 0;
+    text-align: left;
+}
+
+.paris-text {
+    grid-area: paris-text;
+    margin: 0;
+}
+
+.paris-text p {
+    margin: 0;
+    text-align: left;
+}
+
+/* ---- Paris Bilder ---- */
+.paris-1 {
+    grid-area: paris-1;
+    margin: 0;
+}
+
+.paris-2 {
+    grid-area: paris-2;
+    margin: 0;
+}
+
+.paris-3 {
+    grid-area: paris-3;
+    margin: 0;
+}
+
+.paris-4 {
+    grid-area: paris-4;
+    margin: 0;
+}
+
+.paris-5 {
+    grid-area: paris-5;
+    margin: 0;
+}
+
+.text-1 {
+    grid-area: text-1;
+    margin: 0;
+}
+
+
+
+
+/* Hier endet die Zuordnung zu dem Raster */
+

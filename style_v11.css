@@ -10,10 +10,21 @@
 
 body {
     font-family: "Poppins-Light", serif;
+    background-image: url("data/Hintergrund_oben.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.background2 {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 75px;
 }
 
 h1 {
@@ -24,7 +35,7 @@ h1 {
 }
 
 h1:hover {
-    font-size: 72px;
+    font-size: 74px;
 }
 
 p {
@@ -36,12 +47,6 @@ p:hover {
     font-size: 25px;
 }
 
-p2 {
-    font-size: 16px;
-    color: black;
-    margin: 0;
-}
-
 img {
     max-width: 100%;
     height: auto;
@@ -50,7 +55,15 @@ img {
     display: block;
 }
 
+/* ------------------------------------- Raster oben ----------------------------------   */
 
+.titel-container {
+    display: grid;
+    padding: 20px;
+    gap: 20px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 500px; /* Höhe vom Bildbereich */
+}
 /* ---------------------------------------- Raster -------------------------------------- */
 
 .grid-container {
@@ -59,7 +72,7 @@ padding: 20px;
 gap: 20px;
 grid-template-columns: 1fr 5fr 5fr 5fr 1fr;
 grid-template-areas: 
-"schrift schrift schrift schrift schrift"
+"banner banner banner banner banner"
 "designobjekte-name designobjekte-1 designobjekte-2 designobjekte-3 ."
 "designobjekte-name designobjekte-4 designobjekte-5 designobjekte-text ."
 ". drehbuch-1 drehbuch-2 drehbuch-3 drehbuch-name"
@@ -73,21 +86,30 @@ grid-template-areas:
 
 /* ---------------------------- Malou Kammer ---------------------------- */
 .maloukammer {
-    grid-area: schrift;  
-    margin: 0;
-    position: relative;
+    grid-column: 1 / -1;  /* ganze Breite */
+    grid-row: 2;
+    z-index: 1;
 }
 
 .maloukammer img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .bio {
-    position: absolute;
-    top: 285px;
-    left: 750px;
+    grid-column: 4 / 6;   /* deine gewünschte Spalte */
+    grid-row: 1;
+    z-index: 2;
+    align-self: center;
+}
+
+.bio2 {
+    grid-column: 2 / 3;   
+    grid-row: 1;
+    z-index: 2;
+    align-self: center;
+    text-align: right;
 }
 
 .bio a {
@@ -95,16 +117,56 @@ grid-template-areas:
   color: inherit;
 }
 
-.bio2 {
-    position: absolute;
-    top: 440px;
-    left: 340px;
-    text-align: right;
+.bio a:hover {
+    color: rgb(255, 137, 204);
 }
 
 .bio2 a {
   text-decoration: none;
   color: inherit;
+}
+
+.bio2 a:hover {
+    color: rgb(255, 137, 204);
+}
+
+/* ----------------------- banner -----------------------*/
+.banner {
+    grid-area: banner;
+    position: sticky;
+    top: 0;
+    z-index: 80;
+    background-color: white;
+    padding: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: space-between;
+    display: flex; 
+    margin-bottom: 50px;
+}
+
+.banner a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.bio3 {
+    margin: 0;
+    text-align: left;
+    gap: 100px;
+    display: flex;
+}
+
+.bio3 a:hover {
+    color: rgb(255, 137, 204);
+}
+
+.bio4 {
+    text-align: right;
+}
+
+.bio4 a:hover {
+    color: rgb(255, 137, 204);
 }
 
 /* ------------------------- Designobjekte ---------------------------- */
@@ -113,6 +175,7 @@ grid-template-areas:
     margin: 0;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
+    /* scroll-margin-top: 75px; */
 }
 
 .designobjekte-name h1 {
@@ -120,13 +183,12 @@ grid-template-areas:
     text-align: right;
 }
 
-#ziel-designobjekte {
-    scroll-margin-top: 20px;
-}
+/* #ziel-designobjekte {
+    scroll-margin-top: 75px;
+} */
 
 .designobjekte-text {
     grid-area: designobjekte-text;
-    margin-bottom: 300px;
 }
 
 .designobjekte-text p {
@@ -276,13 +338,12 @@ transition: opacity ;
     text-align: left;
 }
 
-#ziel-drehbuch {
-    scroll-margin-top: 20px;
-}
+/* #ziel-drehbuch {
+    scroll-margin-top: 75px;
+} */
 
 .drehbuch-text {
     grid-area: drehbuch-text;
-    margin-bottom: 300px;
 }
 
 .drehbuch-text p {
@@ -436,14 +497,13 @@ transition: opacity ;
     text-align: right;
 }
 
-#ziel-paris {
-    scroll-margin-top: 20px;
-}
+/* #ziel-paris {
+    scroll-margin-top: 75px;
+} */
 
 .paris-text {
     grid-area: paris-text;
     margin: 0;
-    margin-bottom: 300px;
 }
 
 .paris-text p {
@@ -560,7 +620,7 @@ transition: opacity ;
 .paris-5 {
     grid-area: paris-5;
     margin: 0;
-    margin-bottom: 300px;
+    margin-bottom: 250px;
     position: relative;
 }
 
@@ -588,7 +648,6 @@ transition: opacity ;
 .text-1 {
     grid-area: text-1;
     margin: 0;
-    margin-bottom: 300px;
 }
 
 

@@ -1,0 +1,669 @@
+@font-face {
+    font-family: "Poppins-Light";
+    src: url("fonts/Poppins-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Poppins-Black";
+    src: url("fonts/Poppins-Black.otf") format("opentype");
+}
+
+body {
+    font-family: "Poppins-Light", serif;
+    background-image: url(data/Hintergrund_neu1.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+.background2 {
+    grid-area: background2;
+    margin-top: -700px;
+}
+
+h1 {
+    margin: 0;
+    font-family: "Poppins-Light", serif;
+    font-size: 50px;
+    line-height: 60px;
+}
+
+h1:hover {
+    font-size: 74px;
+}
+
+p {
+    font-size: 16px;
+    color: black
+}
+
+p:hover {
+    font-size: 25px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin: 0;
+    display: block;
+}
+
+/* ---------------------------------------- titel --------------------------------------- */
+
+.titel-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr 4fr 4fr 4fr 4fr 4fr 1fr;
+    grid-template-areas: 
+    ". maloukammer maloukammer maloukammer bio . . ."
+    ". . bio2 maloukammer2 maloukammer2 maloukammer2 maloukammer2 .";
+}
+
+/* ---------------------------------------- Raster -------------------------------------- */
+
+.grid-container {
+display: grid;
+padding: 20px;
+gap: 20px;
+grid-template-columns: 1fr 5fr 5fr 5fr 1fr;
+grid-template-areas: 
+"banner banner banner banner banner"
+"designobjekte-name designobjekte-1 designobjekte-2 designobjekte-3 ."
+"designobjekte-name designobjekte-4 designobjekte-5 designobjekte-text ."
+". drehbuch-1 drehbuch-2 drehbuch-3 drehbuch-name"
+". drehbuch-text drehbuch-4 drehbuch-5 drehbuch-name"
+"paris-name paris-1 paris-2 paris-3 ."
+"paris-name paris-4 paris-text paris-5 ."
+". designobjekte-name2 designobjekte-name2 designobjekte-name2 ."
+"background2 background2 background2 background2 background2";
+}
+
+/* -------------------------------------- Inhalt-------------------------------------------*/
+
+/* ---------------------------- Malou Kammer ---------------------------- */
+.maloukammer {
+    grid-area: maloukammer; 
+    margin-top: 220px; 
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.maloukammer img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.maloukammer2 {
+    grid-area: maloukammer2;  
+    margin-bottom: 280px;
+    position: relative;
+}
+
+.maloukammer2 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.bio {
+    grid-area: bio;
+    margin-top: 310px; 
+    padding-left: 20px;
+}
+
+.bio a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.bio a:hover {
+    color: rgb(255, 137, 204);
+}
+
+.bio2 {
+    grid-area: bio2;
+    text-align: right;
+    padding-right: 20px;
+    margin-top: 80px;
+}
+
+.bio2 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.bio2 a:hover {
+    color: rgb(255, 137, 204);
+}
+
+/* ----------------------- banner -----------------------*/
+.banner {
+    grid-area: banner;
+    position: sticky;
+    top: 0;
+    z-index: 80;
+    background-color: white;
+    padding: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: space-between;
+    display: flex; 
+    margin-bottom: 50px;
+}
+
+.banner a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.bio3 {
+    margin: 0;
+    text-align: left;
+    gap: 100px;
+    display: flex;
+}
+
+.bio3 a:hover {
+    color: rgb(255, 137, 204);
+}
+
+.bio4 {
+    text-align: right;
+}
+
+.bio4 a:hover {
+    color: rgb(255, 137, 204);
+}
+
+/* ------------------------- Designobjekte ---------------------------- */
+.designobjekte-name {
+    grid-area: designobjekte-name;
+    margin: 0;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    /* scroll-margin-top: 75px; */
+}
+
+.designobjekte-name h1 {
+    margin: 0;
+    text-align: right;
+}
+
+/* #ziel-designobjekte {
+    scroll-margin-top: 75px;
+} */
+
+.designobjekte-text {
+    grid-area: designobjekte-text;
+}
+
+.designobjekte-text p {
+    margin: 0;
+    text-align: left;
+}
+
+/* ----------- Designobjekte Bilder --------- */
+.designobjekte-1 {
+    grid-area: designobjekte-1;
+    margin: 0;
+    position: relative;
+}
+
+.designobjekte-1 img {
+transition: opacity ;
+}
+
+.designobjekte-1 .b {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.designobjekte-1:hover .a {
+    opacity: 0;
+}
+
+.designobjekte-1:hover .b {
+    opacity: 1;
+}
+
+/* -------------------------------- */
+.designobjekte-2 {
+    grid-area: designobjekte-2;
+    margin: 0;
+    position: relative;
+}
+
+.designobjekte-2 img {
+transition: opacity ;
+}
+
+.designobjekte-2 .b {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.designobjekte-2:hover .a {
+    opacity: 0;
+}
+
+.designobjekte-2:hover .b {
+    opacity: 1;
+}
+
+/* -------------------------------- */
+.designobjekte-3 {
+    grid-area: designobjekte-3;
+    margin: 0;
+    position: relative;
+}
+
+.designobjekte-3 img {
+transition: opacity ;
+}
+
+.designobjekte-3 .b {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.designobjekte-3:hover .a {
+    opacity: 0;
+}
+
+.designobjekte-3:hover .b {
+    opacity: 1;
+}
+
+/* -------------------------------- */
+.designobjekte-4 {
+    grid-area: designobjekte-4;
+    margin-bottom: 300px;
+    position: relative;
+}
+
+.designobjekte-4 img {
+transition: opacity ;
+}
+
+.designobjekte-4 .b {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.designobjekte-4:hover .a {
+    opacity: 0;
+}
+
+.designobjekte-4:hover .b {
+    opacity: 1;
+}
+
+/* -------------------------------- */
+.designobjekte-5 {
+    grid-area: designobjekte-5;
+    margin-bottom: 300px;
+    position: relative;
+}
+
+.designobjekte-5 img {
+transition: opacity ;
+}
+
+.designobjekte-5 .b {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.designobjekte-5:hover .a {
+    opacity: 0;
+}
+
+.designobjekte-5:hover .b {
+    opacity: 1;
+}
+
+/* -------------------------------------------- Drehbuch ------------------------------------------- */
+.drehbuch-name {
+    grid-area: drehbuch-name;
+    margin: 0;
+    writing-mode: vertical-rl;
+}
+
+.drehbuch-name h1 {
+    margin: 0;
+    text-align: left;
+}
+
+/* #ziel-drehbuch {
+    scroll-margin-top: 75px;
+} */
+
+.drehbuch-text {
+    grid-area: drehbuch-text;
+}
+
+.drehbuch-text p {
+    margin: 0;
+    text-align: left;
+}
+
+/* ---------- Drehbuch Bilder ----------- */
+.drehbuch-1 {
+    grid-area: drehbuch-1;
+    margin: 0;
+    position: relative;
+}
+
+.drehbuch-1 img {
+transition: opacity ;
+}
+
+.drehbuch-1 .b {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.drehbuch-1:hover .a {
+    opacity: 0;
+}
+
+.drehbuch-1:hover .b {
+    opacity: 1;
+}
+
+/* ----------------------------- */
+.drehbuch-2 {
+    grid-area: drehbuch-2;
+    margin: 0;
+    position: relative;
+}
+
+.drehbuch-2 img {
+transition: opacity ;
+}
+
+.drehbuch-2 .b {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.drehbuch-2:hover .a {
+    opacity: 0;
+}
+
+.drehbuch-2:hover .b {
+    opacity: 1;
+}
+
+/* ----------------------------- */
+
+.drehbuch-3 {
+    grid-area: drehbuch-3;
+    margin: 0;
+    position: relative;
+}
+
+.drehbuch-3 img {
+transition: opacity ;
+}
+
+.drehbuch-3 .b {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.drehbuch-3:hover .a {
+    opacity: 0;
+}
+
+.drehbuch-3:hover .b {
+    opacity: 1;
+}
+
+/* ----------------------------- */
+
+.drehbuch-4 {
+    grid-area: drehbuch-4;
+    margin-bottom: 300px;
+    position: relative;
+}
+
+.drehbuch-4 img {
+transition: opacity ;
+}
+
+.drehbuch-4 .b {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.drehbuch-4:hover .a {
+    opacity: 0;
+}
+
+.drehbuch-4:hover .b {
+    opacity: 1;
+}
+
+/* ----------------------------- */
+
+.drehbuch-5 {
+    grid-area: drehbuch-5;
+    margin-bottom: 300px;
+    position: relative;
+}
+
+.drehbuch-5 img {
+transition: opacity ;
+}
+
+.drehbuch-5 .b {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.drehbuch-5:hover .a {
+    opacity: 0;
+}
+
+.drehbuch-5:hover .b {
+    opacity: 1;
+}
+
+/* ------------------------------------------------ Paris ----------------------------------------------- */
+.paris-name {
+    grid-area: paris-name;
+    margin: 0;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.paris-name h1 {
+    margin: 0;
+    text-align: right;
+}
+
+/* #ziel-paris {
+    scroll-margin-top: 75px;
+} */
+
+.paris-text {
+    grid-area: paris-text;
+    margin: 0;
+    z-index: 1;
+}
+
+.paris-text p {
+    margin: 0;
+    text-align: left;
+}
+
+/* ------------ Paris Bilder ----------- */
+.paris-1 {
+    grid-area: paris-1;
+    margin: 0;
+    position: relative;
+}
+
+.paris-1 img {
+transition: opacity ;
+}
+
+.paris-1 .b {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.paris-1:hover .a {
+    opacity: 0;
+}
+
+.paris-1:hover .b {
+    opacity: 1;
+}
+
+/* ----------------------------- */
+.paris-2 {
+    grid-area: paris-2;
+    margin: 0;
+    position: relative;
+}
+
+.paris-2 img {
+transition: opacity ;
+}
+
+.paris-2 .b {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.paris-2:hover .a {
+    opacity: 0;
+}
+
+.paris-2:hover .b {
+    opacity: 1;
+}
+
+/* ----------------------------- */
+.paris-3 {
+    grid-area: paris-3;
+    margin: 0;
+    position: relative;
+}
+
+.paris-3 img {
+transition: opacity ;
+}
+
+.paris-3 .b {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.paris-3:hover .a {
+    opacity: 0;
+}
+
+.paris-3:hover .b {
+    opacity: 1;
+}
+
+/* ----------------------------- */
+.paris-4 {
+    grid-area: paris-4;
+    margin: 0;
+    position: relative;
+}
+
+.paris-4 img {
+transition: opacity ;
+}
+
+.paris-4 .b {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.paris-4:hover .a {
+    opacity: 0;
+}
+
+.paris-4:hover .b {
+    opacity: 1;
+}
+
+/* ----------------------------- */
+
+.paris-5 {
+    grid-area: paris-5;
+    margin: 0;
+    margin-bottom: 250px;
+    position: relative;
+}
+
+.paris-5 img {
+transition: opacity ;
+}
+
+.paris-5 .b {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.paris-5:hover .a {
+    opacity: 0;
+}
+
+.paris-5:hover .b {
+    opacity: 1;
+}
+
+/* ---------------------------- */
+
+.text-1 {
+    grid-area: text-1;
+    margin: 0;
+}
+
+
+
+
+/* Hier endet die Zuordnung zu dem Raster */
+
